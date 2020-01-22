@@ -1,0 +1,5 @@
+= icube-cybervision-plugin Docs
+
+Welcome to the icube-cybervision-plugin documentation.
+
+

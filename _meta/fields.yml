@@ -1,0 +1,19 @@
+- key: icube-cybervision-plugin
+  title: icube-cybervision-plugin
+  description:
+  fields:
+    - name: creation_time
+      type: date
+      format: "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+      required: true
+      description: "creation time"
+    - name: first_seen
+      type: date
+      format: "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+      required: true
+      description: "first seen time"
+    - name: last_seen
+      type: date
+      format: "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+      required: true
+      description: "last seen time"

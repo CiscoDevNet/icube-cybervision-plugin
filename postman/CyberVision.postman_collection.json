@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "4ec599b6-289d-45f6-89bb-2effe6ccc3d8",
+		"name": "CyberVision",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Components",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://10.10.10.24/api/1.0/component?limit=100&token={{token}}",
+					"protocol": "https",
+					"host": [
+						"10",
+						"10",
+						"10",
+						"24"
+					],
+					"path": [
+						"api",
+						"1.0",
+						"component"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "100"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					]
+				},
+				"description": "Get Component List"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Events",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://10.10.10.24/api/1.0/event?limit=100&token={{token}}",
+					"protocol": "https",
+					"host": [
+						"10",
+						"10",
+						"10",
+						"24"
+					],
+					"path": [
+						"api",
+						"1.0",
+						"event"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "100"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					]
+				},
+				"description": "Get Event List"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Flows",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://10.10.10.24/api/1.0/flows?limit=100&token={{token}}",
+					"protocol": "https",
+					"host": [
+						"10",
+						"10",
+						"10",
+						"24"
+					],
+					"path": [
+						"api",
+						"1.0",
+						"flows"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "100"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					]
+				},
+				"description": "Get Flow List"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Sensors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://10.10.10.24/api/1.0/sensor?limit=100&token={{token}}",
+					"protocol": "https",
+					"host": [
+						"10",
+						"10",
+						"10",
+						"24"
+					],
+					"path": [
+						"api",
+						"1.0",
+						"sensor"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "100"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					]
+				},
+				"description": "Get Sensor List"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

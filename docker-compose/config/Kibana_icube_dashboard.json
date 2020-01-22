@@ -1,0 +1,106 @@
+[
+  {
+    "_id": "f514a790-3759-11ea-8e73-190c58de8d71",
+    "_type": "dashboard",
+    "_source": {
+      "title": "System Overview",
+      "hits": 0,
+      "description": "System overview",
+      "panelsJSON": "[{\"embeddableConfig\":{},\"gridData\":{\"h\":15,\"i\":\"1\",\"w\":24,\"x\":0,\"y\":0},\"id\":\"cb3b4e60-3759-11ea-8e73-190c58de8d71\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":15,\"i\":\"2\",\"w\":24,\"x\":24,\"y\":0},\"id\":\"06dccf20-375a-11ea-8e73-190c58de8d71\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":15,\"i\":\"4\",\"w\":24,\"x\":24,\"y\":15},\"id\":\"670fc3e0-3771-11ea-8221-83da2a2a541c\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":15,\"i\":\"5\",\"w\":24,\"x\":0,\"y\":15},\"id\":\"fae507c0-3770-11ea-8221-83da2a2a541c\",\"panelIndex\":\"5\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":15,\"i\":\"6\",\"w\":24,\"x\":0,\"y\":30},\"id\":\"db7534c0-381d-11ea-b21f-99499e353732\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"version\":\"6.3.0\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "db7534c0-381d-11ea-b21f-99499e353732",
+    "_type": "visualization",
+    "_source": {
+      "title": "Flows by Time and Protocols",
+      "visState": "{\"title\":\"Flows by Time and Protocols\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(timefield=\\\"creation_time\\\",q='CVModuleName:CVFlow', split=\\\"protocol:10\\\").label(\\\"Protocol [$1]\\\", \\\"^.* > protocol:(\\\\S+) > .*\\\")\",\"interval\":\"1h\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "670fc3e0-3771-11ea-8221-83da2a2a541c",
+    "_type": "visualization",
+    "_source": {
+      "title": "Flows by Time and Types",
+      "visState": "{\"type\":\"timelion\",\"title\":\"Flows by Time and Types\",\"params\":{\"expression\":\".es(timefield=\\\"creation_time\\\",q=\\\"CVModuleName:CVFlow\\\", split=\\\"network_category:5\\\").label(\\\"Network Category [$1]\\\", \\\"^.* > network_category:(\\\\S+) > .*\\\")\",\"interval\":\"1h\"}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "06dccf20-375a-11ea-8e73-190c58de8d71",
+    "_type": "visualization",
+    "_source": {
+      "title": "Event Severity By Time",
+      "visState": "{\"type\":\"timelion\",\"title\":\"Event Severity By Time\",\"params\":{\"expression\":\".es(timefield=\\\"creation_time\\\",q='CVModuleName:CVEvent', split=\\\"severity:5\\\").label(\\\"Severity [$1]\\\", \\\"^.* > severity:(\\\\S+) > .*\\\")\",\"interval\":\"1h\"}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "cb3b4e60-3759-11ea-8e73-190c58de8d71",
+    "_type": "visualization",
+    "_source": {
+      "title": "Components by Vendor Names",
+      "visState": "{\"title\":\"Components by Vendor Names\",\"type\":\"histogram\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":true,\"style\":{\"color\":\"#eee\"},\"valueAxis\":null},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100,\"filter\":false,\"rotate\":0},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Number of Devices\"}},{\"id\":\"ValueAxis-2\",\"name\":\"RightAxis-1\",\"type\":\"value\",\"position\":\"right\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":true,\"mode\":\"normal\",\"type\":\"histogram\",\"drawLinesBetweenPoints\":true,\"showCircles\":true,\"data\":{\"id\":\"2\",\"label\":\"Number of Devices\"},\"valueAxis\":\"ValueAxis-1\"}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Number of Devices\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"vendor_name\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"2\",\"customLabel\":\"Vendor\"}}]}",
+      "uiStateJSON": "{\"spy\":null,\"vis\":{\"legendOpen\":false}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"b46006a0-3ce9-11ea-8d9f-f39c40ec5eae\",\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"a39a7580-3758-11ea-8e73-190c58de8d71\",\"key\":\"CVModuleName\",\"negate\":false,\"params\":{\"query\":\"CVComponent\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"CVComponent\"},\"query\":{\"match\":{\"CVModuleName\":{\"query\":\"CVComponent\",\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"c80270e0-3761-11ea-8221-83da2a2a541c\",\"key\":\"vendor_name\",\"negate\":true,\"params\":[\"IPv6 Multicast\",\"Broadcast\"],\"type\":\"phrases\",\"value\":\"IPv6 Multicast, Broadcast\"},\"query\":{\"bool\":{\"minimum_should_match\":1,\"should\":[{\"match_phrase\":{\"vendor_name\":\"IPv6 Multicast\"}},{\"match_phrase\":{\"vendor_name\":\"Broadcast\"}}]}}}],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "fae507c0-3770-11ea-8221-83da2a2a541c",
+    "_type": "visualization",
+    "_source": {
+      "title": "Flows by Time and Tags",
+      "visState": "{\"aggs\":[],\"params\":{\"expression\":\".es(timefield=\\\"creation_time\\\",q=\\\"tags.Insecure:*\\\").label(\\\"Insecure\\\"),\\n.es(timefield=\\\"creation_time\\\",q=\\\"tags.Authentication:*\\\").label(\\\"Authentication\\\"),\\n.es(timefield=\\\"creation_time\\\",q=\\\"tags.Web:*\\\").label(\\\"Web\\\"),\\n.es(timefield=\\\"creation_time\\\",q=\\\"tags.Database:*\\\").label(\\\"Database\\\"),\\n.es(timefield=\\\"creation_time\\\",q=\\\"tags.FTP:*\\\").label(\\\"FTP\\\"),\\n.es(timefield=\\\"creation_time\\\",q=\\\"tags.HTTP:*\\\").label(\\\"HTTP\\\"),\\n.es(timefield=\\\"creation_time\\\",q=\\\"tags.Low\\\\ Volume:*\\\").label(\\\"Low Volume\\\"),\\n.es(timefield=\\\"creation_time\\\",q=\\\"tags.Proxy:*\\\").label(\\\"Proxy\\\"),\\n.es(timefield=\\\"creation_time\\\",q=\\\"tags.Unestablished:*\\\").label(\\\"Unestablished\\\"),\\n.es(timefield=\\\"creation_time\\\",q=\\\"tags.Controller\\\\ Info:*\\\").label(\\\"Controller Info\\\"),\\n.es(timefield=\\\"creation_time\\\",q=\\\"tags.Controller\\\\ Name:*\\\").label(\\\"Controller Name\\\"),\\n.es(timefield=\\\"creation_time\\\",q=\\\"tags.IEEE\\\\ C37\\\\.118:*\\\").label(\\\"IEEE C37.118\\\"),\\n.es(timefield=\\\"creation_time\\\",q=\\\"tags.Operational\\\\ change:*\\\").label(\\\"Operational change\\\"),\\n.es(timefield=\\\"creation_time\\\",q=\\\"tags.PLC\\\\ Clock:*\\\").label(\\\"PLC Clock\\\"),\\n.es(timefield=\\\"creation_time\\\",q=\\\"tags.Program\\\\ Upload:*\\\").label(\\\"Program Upload\\\"),\\n.es(timefield=\\\"creation_time\\\",q=\\\"tags.Read\\\\ Var:*\\\").label(\\\"Read Var\\\"),\\n.es(timefield=\\\"creation_time\\\",q=\\\"tags.S7:*\\\").label(\\\"S7\\\")\",\"interval\":\"1h\"},\"title\":\"Flows by Time and Tags\",\"type\":\"timelion\"}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  }
+]
