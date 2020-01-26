@@ -65,7 +65,7 @@ When you start getting data then add these two indexes to Kibana: `icube*.` and 
 
 In the `Management > Saved Objects`, view, click `Import` and import the `config/Kibana_icube_dashboard.json`. And config fields to the right index.
 
-#### 4. Dashboard
+#### 3. Dashboard
 Click `Dashboard` at the navigation panel and select `Dashboard`. You can change the **Time Range** at the right top to show data from different time window.
 
 
