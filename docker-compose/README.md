@@ -1,20 +1,20 @@
 # CyberVision system status, and system analysis demo
 
-This demo will build a dashboard which will show the real time CyberVision system data.
+This demo will build a dashboard that will show the real-time CyberVision system data.
   
-[Docker compose](https://docs.docker.com/compose/) start and configure the following service following
+[Docker compose](https://docs.docker.com/compose/) start and configure the following service following:
 
 - icube-cybervision-plugin : Beats plugin that polls CyberVision API and pushes data to elastic search
 - elasticsearch: elasticsearch service. 
 - kibana: Kibana service connected to elasticsearch
 
-### Perquisites
+### Prequisites
 Install [Docker](https://www.docker.com/) and [Docker compose](https://docs.docker.com/compose/).
 
 ## Instruction
 Open a terminal window at the current folder.
 
-## Config
+### Config
 #### 1. Update config in `config/icube-cybervision-plugin.yml`:
 ```
   period:   10s
@@ -54,15 +54,16 @@ docker-compose logs -f
 ```
 
 ## Kibana settings
-After around 1 min you should able to access Kibana dashboard at [http://localhost:5601/](http://localhost:5601/).
-After around 15 mins elasticsearch should start getting data from CyberVision API.
+After around 1 min you should be able to access Kibana dashboard at [http://localhost:5601/](http://localhost:5601/).
+
+After around 15 mins, elasticsearch should start getting data from CyberVision API.
 
 #### 1. Create indexes
 When you start getting data then add these two indexes to Kibana: `icube*.` and create time filter on "creation_time"
 
 #### 2. Import predefined visualizations(charts) and dashboard config
 
-In the `Management > Saved Objects` view, click `Import` and import the `config/Kibana_icube_dashboard.json`. And config fields to the right index.
+In the `Management > Saved Objects`, view, click `Import` and import the `config/Kibana_icube_dashboard.json`. And config fields to the right index.
 
 #### 4. Dashboard
 Click `Dashboard` at the navigation panel and select `Dashboard`. You can change the **Time Range** at the right top to show data from different time window.
