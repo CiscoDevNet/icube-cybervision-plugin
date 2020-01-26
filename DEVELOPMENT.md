@@ -16,8 +16,7 @@ git clone https://github.com/CiscoDevNet/icube-cybervision-plugin ${GOPATH}/src/
 
 ### Build
 
-To build the binary for icube-cybervision-plugin run the command below. This will generate a binary
-in the same directory with the name icube-cybervision-plugin.
+To build the binary for icube-cybervision-plugin, run the command below. This will generate a binary in the same directory with the name icube-cybervision-plugin.
 
 ```
 make
@@ -33,13 +32,13 @@ To run icube-cybervision-plugin with debugging output enabled, run:
 ```
 
 
-### build linux docker and run it with docker-compose
+### Build Linux Docker image and run it with docker-compose
 
 
 #### Update
 
-Each beat has a template for the mapping in elasticsearch and a documentation for the fields
-which is automatically generated based on `fields.yml` by running the following command.
+Each beat has a template for the mapping in Elasticsearch and a documentation for the fields
+that is automatically generated based on `fields.yml` by running the following command.
 
 ```
 make update
@@ -50,7 +49,7 @@ make update
 make docker
 ```
 
-#### Run docker image via docker-compose
+#### Run Docker image via docker-compose
 
 To run icube-cybervision-plugin via docker-compose, please check out [CyberVision system status, and system analysis demo](./docker-compose/README.md).
 
@@ -78,8 +77,8 @@ The test coverage is reported in the folder `./build/coverage/`
 
 ### Update
 
-Each beat has a template for the mapping in elasticsearch and a documentation for the fields
-which is automatically generated based on `fields.yml` by running the following command.
+Each beat has a template for the mapping in Elasticsearch and documentation for the fields
+that is automatically generated based on `fields.yml` by running the following command.
 
 ```
 make update
@@ -88,14 +87,14 @@ make update
 
 ### Cleanup
 
-To clean  icube-cybervision-plugin source code, run the following commands:
+To clean icube-cybervision-plugin source code, run the following commands:
 
 ```
 make fmt
 make simplify
 ```
 
-To clean up the build directory and generated artifacts, run:
+To clean the build directory and generated artifacts, run:
 
 ```
 make clean
@@ -112,12 +111,12 @@ git clone https://github.com/CiscoDevNet/icube-cybervision-plugin ${GOPATH}/src/
 
 ## Packaging
 
-The beat frameworks provides tools to crosscompile and package your beat for different platforms. This requires [docker](https://www.docker.com/) and vendoring as described above. To build packages of your beat, run the following command:
+The Beat frameworks provides tools to cross compile and package your Beat for different platforms. This requires [docker](https://www.docker.com/) as described previously. To build packages of your Beat, run the following command:
 
 ```
 make package
 ```
 
-This will fetch and create all images required for the build process. The whole process to finish can take several minutes.
+This will fetch and create all images required for the build process. The entire process can take several minutes to finish.
 
 
